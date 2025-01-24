@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +8,18 @@
     <script>
         function validateLogin(event) {
             event.preventDefault();
-
-           
             const email = document.querySelector('input[name="email"]').value;
             const password = document.querySelector('input[name="password"]').value;
-
-            
-            const validEmail = "SMKTIBAZMA";
-            const validPassword = "bazma123";
-
-            
+            const validEmail = "SMKTIBAZMA@gmail.com";
+            const validPassword = "pyhton123";
             const messageDisplay = document.getElementById("message");
-
-           
             if (email === validEmail && password === validPassword) {
                 messageDisplay.textContent = "Login successful!";
                 messageDisplay.style.color = "green";
                 
-               
+                setTimeout(() => {
+                    window.location.href = "depresi.html"; 
+                }, 1000);
             } else {
                 messageDisplay.textContent = "Invalid email or password. Please try again.";
                 messageDisplay.style.color = "red";
@@ -34,7 +27,6 @@
         }
     </script>
 </head>
-
 <body>
     <form action="" class="form" onsubmit="validateLogin(event)">
         <h1>Selamat datang!</h1>
@@ -42,12 +34,11 @@
         <input type="email" name="email" class="box" placeholder="Enter Email" required>
         <input type="password" name="password" class="box" placeholder="Enter Password" required>
         <input type="submit" value="LOGIN" id="submit">
-        <div id="message"></div> 
+        <div id="message"></div>
+        
     </form>
-
     <footer>
         <p>Created by Nafeez</p>
     </footer>
 </body>
-
 </html>
