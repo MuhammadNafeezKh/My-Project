@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="ikan.css">
+    <script src="ikan.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔐 Password Generator</h2>
+
+        <div class="password-box">
+            <input type="text" id="password" readonly>
+            <button class="copy-btn" onclick="copyPassword()">📋</button>
+        </div>
+
+        <div class="length-control">
+            <label for="length-input">Panjang Kata Sandi: 
+                <span id="length-value">12</span>
+            </label>
+            <input type="range" id="length-input" min="4" max="30" value="12">
+        </div>
+
+        <div class="options">
+            <p>Opsi Tambahan:</p>
+            <label><input type="checkbox" id="lowercase" checked> Huruf Kecil (a-z)</label>
+            <label><input type="checkbox" id="uppercase" checked> Huruf Besar (A-Z)</label>
+            <label><input type="checkbox" id="numbers" checked> Angka (0-9)</label>
+            <label><input type="checkbox" id="special" checked> Simbol (!@#$%^&*)</label>
+        </div>
+
+        <button class="generate-btn" onclick="generatePassword()">🔄 Buat Kata Sandi</button>
+    </div>
+
+    <!-- 🔹 Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>✅ Password berhasil disalin!</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>💡 Developed by Nafeez</p>
+    </footer>
+
+</body>
+</html>
